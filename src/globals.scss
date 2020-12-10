@@ -1,0 +1,68 @@
+/* Global Page Styling */
+html, body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: black;
+    color: white;
+}
+* {object-fit: contain;box-sizing: border-box;}
+
+/* Preset Class-Based styling for quick access */
+.flex {display:flex;}
+.flex.column {flex-direction: column;}
+.flex.center {justify-content: center;align-items: center;}
+.flex.stretch {justify-content: stretch;align-items: center;}
+
+
+.counter {
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    font-size: larger;
+    font-weight: 900;
+    cursor: pointer;
+    user-select: none;
+}
+
+.progressbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    &.hidden {
+        display: none;
+    }
+   .progress {
+       width: 200px;
+       height: 20px;
+       background: white;
+       border-radius: 10px;
+       border: 2px solid black;
+       margin-right: 1rem;
+       overflow: hidden;
+        .inside {
+            transition: 0.5s ease-in-out;
+            height: 20px;
+            min-width: 1px;
+            background: red;
+        }
+    }
+    .percentage {
+        font-weight: 900;
+        color: white;
+    }
+}
